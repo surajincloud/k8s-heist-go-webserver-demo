@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: k8s-heist
+  name: k8s-heist
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-heist
+  template:
+    metadata:
+      labels:
+        app: k8s-heist
+    spec:
+      containers:
+      - image: surajnarwade/kubernetesheist:0.1
+        name: kubernetesheist
+        ports:
+        - containerPort: 3000
