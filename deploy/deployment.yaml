@@ -15,7 +15,7 @@ spec:
         app: k8s-heist
     spec:
       containers:
-      - image: surajnarwade/kubernetesheist:0.1
+      - image: surajnarwade/kubernetesheist
         name: kubernetesheist
         ports:
         - containerPort: 3000
